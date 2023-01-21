@@ -1,0 +1,258 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    user-select: none;
+}
+
+svg {
+    position: absolute;
+    right:100vw;
+    background-color: black;
+    width: 100vw;
+    height: 50vh;
+    animation: 0.5s 1.5s move;
+    animation-fill-mode: forwards;
+}
+
+.aboutsvg {
+    translate: 100vw;
+    animation: none;
+}
+
+nav {
+    margin: 0 1vw 0 1vw;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 4vw;
+    display: flex;
+    position: fixed;
+    width: 98vw;
+    top: -6vw;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    animation: 1s 3s navbar;
+    animation-fill-mode: forwards;
+}
+
+.navbarDisabled {
+    animation: none;
+    top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition-duration: 0.4s;
+
+}
+
+.notDisabled:hover {
+    color: #0B7DFF;
+}
+
+.isDisabled {
+    opacity: 0.5;
+}
+
+.book {
+    font-family: 'Archivo Black', sans-serif;
+    text-align: left;
+    position: absolute;
+    top: 70%;
+    left: -100vw;
+    width: 47vw;
+    height: 350px;
+
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    animation: 1s 3s book;
+    animation-fill-mode: forwards;
+}
+.book p {
+    font-size: 4.8vw;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.book button {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3vw;
+    border-style: none;
+    color: white;
+    background-color: black;
+    transition-duration: 0.4s;
+    width: 25vw;
+    height: 7vw;
+}
+
+.book button:hover {
+    background-color: #0B7DFF;
+}
+
+#scissor{
+    display: flex;
+    position: absolute;
+    width: 340px;
+    height: 780px;
+    bottom: -200px;
+    left: -340px;
+    animation: 1s 3s scissor;
+    animation-fill-mode: forwards;
+}
+
+#clips, #better, #disabledBetter, #disabledBetter2 {
+    background-color: transparent;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#clips {
+    font-family: 'Dancing Script', cursive;
+    top: 50%;
+    left: 50%;
+    animation: 1s 1.1s clips;
+    animation-fill-mode: forwards;
+}
+
+#better, #disabledBetter {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 27vw;
+    width: 100vw;
+    top: 25%;
+    left: 50vw;
+    color: white;
+    animation: 2s  0s better;
+}
+
+#disabledBetter {
+    animation: none;
+    left: 150;
+}
+
+#disabledBetter2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 22vw;
+    width: 100vw;
+    top: 25%;
+    left: 50vw;
+    color: white;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(o);
+    }
+
+    100% {
+        transform: translate(100vw)
+    }
+}
+
+@keyframes clips {
+    from {top: 50%;}
+    to {top: 52%;}
+}
+
+@keyframes better {
+    from {left: -50vw;}
+    to {left: 150;}
+}
+
+@keyframes navbar {
+    from {top: -6vw;}
+    to {top: 0;}
+}
+
+@keyframes scissor {
+    from {left: -100vw;}
+    to {left: -180px;}
+}
+
+@keyframes book {
+    from {left: 130vw;}
+    to {left: 74%;}
+}
+
+@media (min-height: 700px) {
+    .book {
+        top: 80%;
+    }
+}
+
+@media (min-height: 600px) {
+    .book {
+        top: 79%;
+    }
+}
+
+@media (min-width: 576px) {
+    nav {
+        font-size: 2vw;
+    }
+
+    .book {
+        top: 80%;
+        animation: 1s 3s book;
+        animation-fill-mode: forwards;
+    }
+
+    .book p {
+        font-size: 3.6vw;
+    }
+
+    
+}
+@media (min-width: 881px) {
+    .book {
+        animation: 1s 3.3s book;
+        animation-fill-mode: forwards;
+    }
+
+    .book p {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .book {
+        animation: 1s 3.4s book;
+        animation-fill-mode: forwards;
+    }
+
+    nav {
+        font-size: 1vw;
+    }
+}
+
+@media (min-width: 1025px) {
+    .book {
+        animation: 1s 3.3s book;
+        animation-fill-mode: forwards;
+    }
+
+    .book p {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width: 1360px) {
+    .book p {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 1535px) {
+    .book p {
+        font-size: 2vw;
+    }
+}
