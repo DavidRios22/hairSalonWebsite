@@ -24,6 +24,7 @@ svg {
 }
 
 nav {
+    user-select: none;
     margin: 0 1vw 0 1vw;
     font-family: 'Archivo Black', sans-serif;
     font-size: 4vw;
@@ -31,7 +32,7 @@ nav {
     position: fixed;
     width: 98vw;
     top: -6vw;
-    z-index: 1;
+    z-index: 3;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -45,6 +46,7 @@ nav {
 }
 
 a {
+
     text-decoration: none;
     color: white;
     transition-duration: 0.4s;
@@ -95,6 +97,56 @@ a {
     background-color: #0B7DFF;
 }
 
+.contact {
+    font-family: 'Archivo Black', sans-serif;
+    position: absolute;
+    bottom: 20vh;
+    right: 4vh;
+}
+
+.send {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3vw;
+    border-style: none;
+    color: white;
+    background-color: black;
+    transition-duration: 0.4s;
+    width: 25vw;
+    height: 7vw;
+    padding: none;
+}
+
+.send:hover {
+    background-color: #0B7DFF;
+}
+
+textarea {
+    resize: none;
+    width: 24.6vw;
+}
+
+input {
+    width: 24.4vw;
+}
+
+
+
+#image-track > .image {
+    width: 40vh;
+    height: 56vh;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(0%, -50%); 
+  }
+
 #scissor{
     display: flex;
     position: absolute;
@@ -140,6 +192,7 @@ a {
 }
 
 #disabledBetter2 {
+    z-index: 1;
     font-family: 'Archivo Black', sans-serif;
     font-size: 22vw;
     width: 100vw;
@@ -236,7 +289,7 @@ a {
 
 @media (min-width: 1025px) {
     .book {
-        animation: 1s 3.3s book;
+        animation: 1s 3.25s book;
         animation-fill-mode: forwards;
     }
 
