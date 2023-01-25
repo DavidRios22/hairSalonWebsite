@@ -97,39 +97,223 @@ a {
     background-color: #0B7DFF;
 }
 
+
+
 .contact {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 2fr;
+    column-gap: 5px;
+    grid-template-areas: 
+    "social text-area"
+    "social button";
     font-family: 'Archivo Black', sans-serif;
     position: absolute;
-    bottom: 20vh;
-    right: 4vh;
+    top: 50vh;
+    right: 5%;
+    left: 5%;
+    font-size: 3.5vw;
+    height: 49vh;
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+    height: 3vw;
 }
 
 .send {
+    grid-area: button;
     font-family: 'Archivo Black', sans-serif;
     font-size: 3vw;
     border-style: none;
     color: white;
     background-color: black;
     transition-duration: 0.4s;
-    width: 25vw;
-    height: 7vw;
-    padding: none;
+    width: 40vw;
+    height: 10vw;
 }
 
 .send:hover {
     background-color: #0B7DFF;
 }
 
+.text-area {
+    grid-area: text-area;
+}
+
+.input-area {
+    grid-area: input-area;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 28vh;
+}
+
+.text-area p {
+    margin: 0;
+}
+
+.social {
+    grid-area: social;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    grid-template-areas: 
+    "facebook"
+    "linkedin"
+    "twitter"
+    "behance";
+}
+
+.social-img {
+    height: 10vw;
+}
+
+#behance, #linkedin, #twitter, #facebook {
+    background-color: white;
+    transition-duration: 0.4s;
+    width: 25vw;
+    height: 25vw;
+    
+}
+
+@media (min-width: 455px ) {
+    #behance, #linkedin, #twitter, #facebook {
+        width: 20vw;
+        height: 20vw;
+    }
+}
+
+@media (min-width: 965px ) {
+    .input-area {
+        font-size: 4vw;
+    }
+
+    .send {
+        margin-bottom: 7.5vw;
+    }
+}
+
+@media (min-width: 1135px) {
+
+    .input-area {
+        font-size: 30px;
+    }
+
+    .contact {
+        height: 569px;
+    }
+
+    .social-img {
+        height: 112.5px;
+    }
+
+    .social-img a {
+        width: 250px;
+        height: 76px;
+    }
+    
+    .social {
+        height: 56px;
+    }
+
+    .send {
+        height: 114px;
+        margin-bottom: 0px;
+   
+    }
+
+    #behance, #linkedin, #twitter, #facebook {
+        width: 220px;
+        height: 220px;
+    }
+
+    .text-area {
+        height: 1px;
+    }
+    textarea {
+        height: 85px;
+        resize: none;
+        width: 450px;
+    }
+    
+    input {
+        height: 20px;
+        width: 450px;
+    }
+}
+
+#facebook {
+    margin-top: 10.5px;
+    grid-area: facebook;
+}
+
+#facebook:hover {
+    background-color: #0B7DFF;
+}
+
+#linkedin {
+    grid-area: linkedin;
+}
+
+#linkedin:hover {
+    background-color: #0B7DFF;
+}
+
+#twitter {
+    grid-area: twitter;
+}
+
+#twitter:hover {
+    background-color: #0B7DFF;
+}
+
+#behance {
+    grid-area: behance;
+}
+
+#behance:hover {
+    background-color: #0B7DFF;
+}
+
 textarea {
+    height: 7vw;
     resize: none;
-    width: 24.6vw;
+    width: 39.3vw;
 }
 
 input {
-    width: 24.4vw;
+    width: 39vw;
 }
 
+.about {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1vw;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
+    grid-area: 
+    "plant aboutus"
+    "plant aboutp";
+    height: 50vh;
+    bottom: 0px;
+}
+
+.aboutus {
+    grid-area: aboutus;
+}
+
+.plant {
+    grid-area: plant;
+    width: 8vw;
+}
+
+.aboutp {
+    grid-area: aboutp;
+}
 
 #image-track > .image {
     width: 40vh;
@@ -159,6 +343,7 @@ input {
 }
 
 #clips, #better, #disabledBetter, #disabledBetter2 {
+    background-color: white;
     background-color: transparent;
     margin: 0;
     position: absolute;
@@ -246,6 +431,8 @@ input {
     .book {
         top: 79%;
     }
+    
+    
 }
 
 @media (min-width: 576px) {
@@ -261,6 +448,11 @@ input {
 
     .book p {
         font-size: 3.6vw;
+    }
+
+    .contact {
+        font-size: 5vw;
+        height: 50vw;
     }
 
     
